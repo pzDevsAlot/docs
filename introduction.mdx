@@ -2,63 +2,99 @@
 title: Introduction
 description: "Welcome to the pz dev ecosystem – High-performance scripts for FiveM."
 ---
-
 <img className="block dark:hidden" src="/pzbanner.png" alt="pz_Dev Banner" />
 <img className="hidden dark:block" src="/pzbanner.png" alt="pz_Dev Banner" />
 
-## Elevating the FiveM Experience
+Welcome
 
-pz_Dev provides highly optimized, modular, and professional-grade scripts designed primarily for the **QBCore** framework and custom environments. Our mission is to bridge the gap between complex backend logic and seamless player experiences.
+Welcome to the official documentation hub for pz_Dev.
 
-Whether you are looking for advanced utility scripts like `pz_discord` or immersive gameplay features like `pz_pawnshop`, our resources are built with performance and developer flexibility in mind.
+This site contains detailed guides, configuration references, and troubleshooting tips for all our resources. We designed these docs to help you get set up quickly and keep your server running smoothly.
 
-### Why Choose pz dev?
+Why Choose pz dev?
 
 <CardGroup cols={2}>
-  <Card
-    title="Optimized Performance"
-    icon="gauge-high"
-  >
-    Lowering MS and resource usage is our priority. Every script is tested for high-population stability.
-  </Card>
-  <Card
-    title="Framework Versatility"
-    icon="code"
-  >
-    Deep integration with QBCore while maintaining clean logic for custom core adaptations.
-  </Card>
-  <Card
-    title="Developer Centric"
-    icon="screwdriver-wrench"
-  >
-    Extensive exports and open-ended config files allow you to tailor every script to your server's needs.
-  </Card>
-  <Card
-    title="Premium Support"
-    icon="discord"
-  >
-    Access to a dedicated community and direct developer support for all pz_Dev+ subscribers.
-  </Card>
+<Card
+title="Optimized Performance"
+icon="gauge-high"
+>
+Lowering MS and resource usage is our priority. Every script is tested for high-population stability.
+</Card>
+<Card
+title="Framework Versatility"
+icon="code"
+>
+Deep integration with QBCore while maintaining clean logic for custom core adaptations.
+</Card>
+<Card
+title="Developer Centric"
+icon="screwdriver-wrench"
+>
+Extensive exports and open-ended config files allow you to tailor every script to your server's needs.
+</Card>
+<Card
+title="Premium Support"
+icon="discord"
+>
+Access to a dedicated community and direct developer support for all pz_Dev+ subscribers.
+</Card>
 </CardGroup>
 
-## Getting Started
+Getting Started & Installation
 
-To get the most out of pz_Dev resources, we recommend following our structured documentation:
+To get the most out of pz_Dev resources, follow this structured guide to ensure a smooth installation:
 
 <Steps>
-  <Step title="Global Requirements">
-    Ensure your server artifacts are up to date and you have the necessary dependencies installed (e.g., `ox_lib` or `qb-core`).
-  </Step>
-  <Step title="Installation">
-    Follow the specific guide for your purchased resource to ensure correct SQL injection and file placement.
-  </Step>
-  <Step title="Configuration">
-    Modify the `config.lua` to match your server's economy and permission levels.
-  </Step>
+<Step title="1. Global Requirements & Artifacts">
+Before installing, ensure your server artifacts are up to date.
+
+At an absolute minimum, our scripts require **Server Artifact version 7290** or higher. We strongly suggest using the latest **Recommended** artifact listing for your server's operating system.
+
+*Note: This is different from your Game Build (e.g., 3095), which is also fully supported.*
+
+
+</Step>
+
+<Step title="2. Download from Keymaster">
+To download your purchased asset, head over to the Cfx.re Keymaster Portal.
+
+1. Log in and navigate to the **"Granted Assets"** tab.
+2. Search for `pz-` to find your assets.
+
+*Note: After purchase, it may take up to 5 minutes for the asset to appear in your portal account.*
+
+
+</Step>
+
+<Step title="3. Install the Resource">
+Extract or open the zip file you just downloaded.
+
+**Important:** Do NOT drag the downloaded folder directly into your server blindly. Open it first. The folders inside are the actual resources that you must add to your server's `resources` directory (e.g., `pz_antimapcollision`).
+
+
+</Step>
+
+<Step title="4. Configuration">
+Open the config.lua file within the resource folder. Modify the settings to match your server's economy, permission levels, and specific needs before starting the script.
+</Step>
+
+<Step title="5. Restart & Verify">
+Fully restart your FiveM server.
+
+If you just start the script via the console or txAdmin while the server is running, you will likely run into a Keymaster escrow error. Restarting your server ensures your server is aware of your new license and authenticates the script correctly.
+
+
+</Step>
 </Steps>
 
-## pz dev+ Subscription
+pz dev+ Subscription
 
-Looking for the full suite? The **pz_Dev+** package grants you access to our entire library of scripts, exclusive beta releases, and priority support. 
+Looking for the full suite? The pz_Dev+ package grants you access to our entire library of scripts, exclusive beta releases, and priority support.
 
-[Explore pz_Dev+ on our Store](https://pz-dev-store.tebex.io/category/subscriptions)
+Explore pz_Dev+ on our Store
+
+Feedback & Support
+
+We want this documentation to be as helpful as possible. If you find a section confusing or notice missing information, please reach out via Discord so we can improve it for everyone.
+
+If you encounter any issues or have questions not answered here, simply open a ticket in our Discord server and our support staff will assist you as soon as possible.
