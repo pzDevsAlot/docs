@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "willow",
-  "name": "pz documentation",
+  "name": "documenation",
   "colors": {
     "primary": "#901728",
     "light": "#901728",
@@ -99,6 +99,9 @@
       "light": "#901728"
     }
   },
-  "favicon": "/pzicon.png",
+  "favicon": {
+    "light": "/pzicon.png",
+    "dark": "/pzicon.png"
+  },
   "logo": "/pzicon.png"
 }
