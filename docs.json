@@ -24,7 +24,12 @@
         "pages": [
           "introduction",
           "terms-of-service",
-          ""
+          {
+            "group": "Untitled Group",
+            "pages": [
+              "untitled-page"
+            ]
+          }
         ]
       }
     ]
