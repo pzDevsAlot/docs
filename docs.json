@@ -47,7 +47,7 @@
             "group": "pz_antimapcollision",
             "pages": [
               "pzantimap-getting-started",
-              "pzantimap-Configuration",
+              "pzantimap-configuration",
               "pzantimap-common-issues"
             ]
           }
