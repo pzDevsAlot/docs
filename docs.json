@@ -12,55 +12,13 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Community",
+          "anchor": "Discord",
           "icon": "slack",
-          "href": "https://mintlify.com/community"
-        },
-        {
-          "anchor": "Blog",
-          "icon": "newspaper",
-          "href": "https://mintlify.com/blog"
+          "href": "https://discord.gg/yXPUBgZUmb"
         }
       ]
     },
     "tabs": [
-      {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
       {
         "tab": "API reference",
         "groups": [
@@ -79,6 +37,12 @@
               "api-reference/endpoint/webhook"
             ]
           }
+        ]
+      },
+      {
+        "tab": "Get Started",
+        "pages": [
+          "introduction"
         ]
       }
     ]
