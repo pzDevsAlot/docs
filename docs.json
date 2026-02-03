@@ -24,14 +24,7 @@
         "pages": [
           "introduction",
           "terms-of-service",
-          {
-            "group": "pz_vip",
-            "pages": [
-              "untitled-page",
-              "untitled-page",
-              "untitled-page"
-            ]
-          }
+          ""
         ]
       }
     ]
