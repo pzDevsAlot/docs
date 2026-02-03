@@ -87,5 +87,8 @@
     "404": {
       "redirect": false
     }
+  },
+  "appearance": {
+    "strict": true
   }
 }
