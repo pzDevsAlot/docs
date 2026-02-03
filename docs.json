@@ -27,7 +27,6 @@
       },
       {
         "group": "Resources",
-        "expanded": true,
         "pages": [
           {
             "group": "pz_vip",
@@ -36,7 +35,6 @@
               "pzvip-Configuration",
               {
                 "group": "Exports",
-                "expanded": true,
                 "pages": [
                   "pzvip-client",
                   "pzvip-server"
