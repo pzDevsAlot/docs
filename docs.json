@@ -20,29 +20,19 @@
     },
     "tabs": [
       {
-        "tab": "API reference",
-        "groups": [
+        "tab": "Get Started",
+        "anchors": [
           {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+            "anchor": "paid resources",
+            "groups": [
+              {
+                "group": "pz_vip",
+                "pages": [
+                  "untitled-page"
+                ]
+              }
             ]
           }
-        ]
-      },
-      {
-        "tab": "Get Started",
-        "pages": [
-          "introduction"
         ]
       }
     ]
