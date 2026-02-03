@@ -1,0 +1,32 @@
+title: "Client Exports" description: "Functions available to your client-side scripts."
+
+isVIP
+
+Checks if the local player currently has an active VIP status.
+
+local isVIP = exports.pz_vip:isVIP()
+-- Returns: boolean
+
+
+vipLevel
+
+Returns the numerical tier of the player's VIP status.
+
+local level = exports.pz_vip:vipLevel()
+-- Returns: number (0 if not a VIP)
+
+
+dataVIP
+
+Returns the full table of the player's cached VIP information.
+
+local data = exports.pz_vip:dataVIP()
+-- Returns: table { level, label, expires, etc }
+
+
+Usage Example
+
+if exports.pz_vip:isVIP() then
+    -- Example: Open a VIP-only teleport menu
+    TriggerEvent('my_script:openVipMenu')
+end

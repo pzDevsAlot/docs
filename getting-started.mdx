@@ -1,0 +1,38 @@
+---
+title: "Getting Started"
+description: "A flexible & robust VIP system for ESX and QB-Core."
+---
+
+`pz_vip` is a powerful VIP management system featuring a persistent, offline-aware reward ledger. This ensures players never lose their items, money, or vehicles, even if they are offline when their status is updated.
+
+## Features
+* **Multi-Tier System**: Support for unlimited VIP tiers with inheritable rewards.
+* **Persistent Ledger**: Every reward is logged individually for on-demand claiming.
+* **Modern Stack**: Built with `ox_lib` and `oxmysql` for optimal performance.
+* **Automated**: Built-in support for Tebex integration.
+
+## Installation
+
+<Steps>
+  <Step title="Place Resource">
+    Drop the `pz_vip` folder into your `resources` directory.
+  </Step>
+  <Step title="Database Setup">
+    Import the `schema.sql` file. This creates the `pz_vips` and `pz_vip_rewards` tables.
+  </Step>
+  <Step title="ACE Permissions">
+    **Critical Step:** Add these to your `server.cfg` so the script can manage player groups:
+    ```cfg
+    add_ace resource.pz_vip command.add_ace allow
+    add_ace resource.pz_vip command.remove_ace allow
+    ```
+  </Step>
+  <Step title="Start Resource">
+    Ensure dependencies are started in order:
+    ```cfg
+    ensure ox_lib
+    ensure oxmysql
+    ensure pz_vip
+    ```
+  </Step>
+</Steps>

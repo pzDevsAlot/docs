@@ -31,7 +31,17 @@
                 "group": "pz_vip",
                 "expanded": true,
                 "pages": [
-                  "untitled-page"
+                  "getting-started",
+                  "Configuration",
+                  {
+                    "group": "Exports",
+                    "expanded": true,
+                    "pages": [
+                      "Client",
+                      "Server"
+                    ]
+                  },
+                  "Commands-Guide"
                 ]
               }
             ]

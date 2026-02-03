@@ -1,0 +1,44 @@
+title: "Configuration" description: "How to customize pz_vip for your server framework and tiers."
+
+Core Settings
+
+The primary settings are located in config.lua. It is essential to set your framework correctly so the script can communicate with your player data and your server's economy.
+
+Config.Framework = 'qb-core' -- Options: 'esx', 'qb-core', 'custom'
+Config.AdminCommandPermission = 'admin' -- The ACE permission required for staff commands
+
+
+Custom Frameworks
+
+If you use a custom or heavily modified core, you must edit the non-escrowed bridge.lua file. This allows you to bridge the gap between pz_vip and your unique server logic.
+
+<Card title="Bridge Integration" icon="bridge">
+Open bridge.lua and map the following functions to your framework's natives:
+
+GetPlayer - To fetch player data.
+
+AddMoney - To grant cash/bank rewards.
+
+AddItem - To handle item rewards.
+
+AddWeapon - To handle vehicle or weapon rewards.
+</Card>
+
+VIP Tiers & Rewards
+
+Within the Config.Tiers table, you can define your subscription levels.
+
+Inheritance: You can set higher tiers to automatically inherit rewards from lower tiers.
+
+Reward Ledger: Rewards are not granted instantly upon login; they are added to a ledger, allowing players to claim them at their convenience.
+
+Tebex Automation
+
+To automate your shop delivery, add this command to your Tebex package settings under the Commands section:
+
+tebex:grantvip {transaction} {id} [level] [days]
+
+
+<Note>
+{id} should be the player's primary identifier (License or Steam). Ensure the level you input matches the numerical ID defined in your Config.Tiers.
+</Note>
