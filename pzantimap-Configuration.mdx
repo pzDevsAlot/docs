@@ -1,0 +1,60 @@
+# Configuration
+
+The script is configured entirely via the config.lua file. The primary method of configuration is defining "Phasing Zones" (areas where collision is disabled).
+
+## Setting up Zones (Step-by-Step)
+
+We have included a helper command to make setting up zones incredibly easy.
+
+### Step 1: Find Your Fake Door
+
+Walk up to the fake door or invisible wall you want to be able to pass through. Stand directly in front of it, in the center of where you want your zone to be.
+
+### Step 2: Use the In-Game Command
+
+While standing in position, open your F8 console (or chat) and type:
+
+```
+/getzonecoords
+```
+
+### Step 3: Get the Code
+
+The command will print a line of code to your F8 console (and copy it to your clipboard if supported). It will look like this:
+
+```
+{ coords = vector3(123.45, -678.90, 30.50), size = vector3(2.0, 2.0, 3.0), heading = 90.00 },
+```
+
+### Step 4: Add to Config
+
+Open config.lua and paste that line into the Config.StaticCollisionZones table.
+
+## Config Example
+
+Below is an example of a valid configuration file.
+
+```lua
+Config = {}
+
+-- Enable or Disable the script entirely
+Config.Enabled = true
+
+-- Add your phasing zones here.
+Config.StaticCollisionZones = {
+    -- The zone you generated from the F8 console:
+    { coords = vector3(123.45, -678.90, 30.50), size = vector3(2.0, 2.0, 3.0), heading = 90.00 },
+
+    -- Add as many zones as needed:
+    { coords = vector3(456.78, -901.23, 40.00), size = vector3(2.0, 2.0, 3.0), heading = 0.00 },
+    { coords = vector3(789.01, -234.56, 50.25), size = vector3(4.0, 2.0, 3.0), heading = 270.00 },
+}
+```
+
+## Configuration Values
+
+| Variable | Description |
+| --- | --- |
+| coords | The center point vector3(x, y, z) of the phasing zone. |
+| size | The dimensions vector3(width, depth, height) of the box zone. |
+| heading | The rotation of the box zone (matches the door's angle). |

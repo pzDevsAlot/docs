@@ -30,17 +30,26 @@
                 "group": "pz_vip",
                 "expanded": true,
                 "pages": [
-                  "getting-started",
-                  "Configuration",
+                  "pzvip-getting-started",
+                  "pzvip-Configuration",
                   {
                     "group": "Exports",
                     "expanded": true,
                     "pages": [
-                      "Client",
-                      "Server"
+                      "pzvip-client",
+                      "pzvip-server"
                     ]
                   },
-                  "Commands-Guide"
+                  "pzvip-commands-guide"
+                ]
+              },
+              {
+                "group": "pz_antimapcollision",
+                "expanded": true,
+                "pages": [
+                  "pzantimap-getting-started",
+                  "pzantimap-Configuration",
+                  "pzantimap-common-issues"
                 ]
               }
             ]
