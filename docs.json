@@ -98,5 +98,6 @@
     "color": {
       "light": "#901728"
     }
-  }
+  },
+  "favicon": "/pzicon.png"
 }
