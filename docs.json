@@ -17,9 +17,9 @@
         }
       ]
     },
-    "tabs": [
+    "groups": [
       {
-        "tab": "Get Started",
+        "group": "Get Started",
         "pages": [
           "introduction",
           "terms-of-service",
