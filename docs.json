@@ -27,6 +27,7 @@
       },
       {
         "group": "Resources",
+        "expanded": true,
         "pages": [
           {
             "group": "pz_vip",
