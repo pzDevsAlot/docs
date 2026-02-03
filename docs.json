@@ -31,7 +31,6 @@
         "pages": [
           {
             "group": "pz_vip",
-            "expanded": true,
             "pages": [
               "pzvip-getting-started",
               "pzvip-Configuration",
@@ -48,7 +47,6 @@
           },
           {
             "group": "pz_antimapcollision",
-            "expanded": true,
             "pages": [
               "pzantimap-getting-started",
               "pzantimap-Configuration",
