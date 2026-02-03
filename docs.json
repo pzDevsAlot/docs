@@ -21,16 +21,15 @@
     "tabs": [
       {
         "tab": "Get Started",
-        "anchors": [
+        "pages": [
+          "introduction",
+          "terms-of-service",
           {
-            "anchor": "paid resources",
-            "groups": [
-              {
-                "group": "pz_vip",
-                "pages": [
-                  "untitled-page"
-                ]
-              }
+            "group": "pz_vip",
+            "pages": [
+              "untitled-page",
+              "untitled-page",
+              "untitled-page"
             ]
           }
         ]
