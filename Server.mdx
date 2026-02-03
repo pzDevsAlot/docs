@@ -3,44 +3,28 @@ title: "Server"
 description: "Functions available to your server-side scripts."
 ---
 
-
-
 isVIP
 
 Checks if a specific player has an active VIP status.
 
-local isVIP = exports.pz_vip:isVIP(source)
--- Returns: boolean
-
+```markdown
+local isVIP = exports.pz_vip:isVIP(source) -- Returns: boolean
+```
 
 vipLevel
 
 Returns the numerical tier of a specific player.
 
-local level = exports.pz_vip:vipLevel(source)
--- Returns: number (0 if not a VIP)
-
+```markdown
+local level = exports.pz_vip:vipLevel(source) -- Returns: number (0 if not a VIP)
+```
 
 Integration Examples
 
 <CodeGroup>
 
--- Give VIPs a 10% bonus per level when processing
-local vipLevel = exports.pz_vip:vipLevel(source)
-local baseAmount = 10
-local finalAmount = baseAmount
-
-if vipLevel \> 0 then
-finalAmount = math.floor(baseAmount \* (1.0 + (vipLevel \* 0.10)))
-end
-
-
-
--- Set priority based on VIP Level
-local level = exports.pz_vip:vipLevel(source)
-if level >= 1 then
-    -- Logic for your queue script here
-end
-
+``` filename
+— Give VIPs a 10% bonus per level when processing local vipLevel = exports.pz_vip:vipLevel(source) local baseAmount = 10 local finalAmount = baseAmount
+```
 
 </CodeGroup>

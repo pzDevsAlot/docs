@@ -3,38 +3,49 @@ title: "Commands Guide"
 description: "How to manage and claim VIP rewards."
 ---
 
-
-
-Player Commands
-
-Command
-
-Description
-
-/checkvip
+<Badge>Player Commands</Badge>
 
 View current status and expiration date.
 
-/checkviprewards
+```
+/checkvip
+```
 
 See how many unclaimed packages/cars are waiting.
 
-/claimvipitems
+```
+/checkviprewards
+```
 
 Claim one full item package.
 
-/claimvipcar
+```
+/claimvipitems
+```
 
 Claim a vehicle reward (must be on foot).
 
-Admin Commands
+```
+/claimvipcar
+```
+
+<Badge>Admin Commands</Badge>
 
 <Warning>
-Requires the ACE permission defined in Config.AdminCommandPermission (Default: 'admin').
+  Requires the ACE permission defined in Config.AdminCommandPermission (Default: 'admin').
 </Warning>
 
-/addvip [ID] [Level] [Days] — Grant VIP status.
 
-/removevip [ID] — Revoke status immediately.
+<Card title="/addvip [ID] [Level] [Days] — Grant VIP status." icon="sparkles">
+  
+</Card>
 
-/checkvip [ID] — Check another player's status.
+
+<Card title="/removevip [ID] — Revoke status immediately." icon="sparkles">
+  
+</Card>
+
+
+<Card title="/checkvip [ID] — Check another player's status." icon="sparkles">
+  
+</Card>
