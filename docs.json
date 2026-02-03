@@ -25,9 +25,15 @@
           "introduction",
           "terms-of-service",
           {
-            "group": "Untitled Group",
+            "group": "resources",
             "pages": [
-              "untitled-page"
+              {
+                "group": "pz_vip",
+                "expanded": true,
+                "pages": [
+                  "untitled-page"
+                ]
+              }
             ]
           }
         ]
