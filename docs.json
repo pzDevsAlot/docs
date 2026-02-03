@@ -22,36 +22,36 @@
         "group": "Get Started",
         "pages": [
           "introduction",
-          "terms-of-service",
+          "terms-of-service"
+        ]
+      },
+      {
+        "group": "Resources",
+        "pages": [
           {
-            "group": "resources",
+            "group": "pz_vip",
+            "expanded": true,
             "pages": [
+              "pzvip-getting-started",
+              "pzvip-Configuration",
               {
-                "group": "pz_vip",
+                "group": "Exports",
                 "expanded": true,
                 "pages": [
-                  "pzvip-getting-started",
-                  "pzvip-Configuration",
-                  {
-                    "group": "Exports",
-                    "expanded": true,
-                    "pages": [
-                      "pzvip-client",
-                      "pzvip-server"
-                    ]
-                  },
-                  "pzvip-commands-guide"
+                  "pzvip-client",
+                  "pzvip-server"
                 ]
               },
-              {
-                "group": "pz_antimapcollision",
-                "expanded": true,
-                "pages": [
-                  "pzantimap-getting-started",
-                  "pzantimap-Configuration",
-                  "pzantimap-common-issues"
-                ]
-              }
+              "pzvip-commands-guide"
+            ]
+          },
+          {
+            "group": "pz_antimapcollision",
+            "expanded": true,
+            "pages": [
+              "pzantimap-getting-started",
+              "pzantimap-Configuration",
+              "pzantimap-common-issues"
             ]
           }
         ]
