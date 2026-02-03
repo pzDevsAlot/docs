@@ -99,5 +99,6 @@
       "light": "#901728"
     }
   },
-  "favicon": "/pzicon.png"
+  "favicon": "/pzicon.png",
+  "logo": "/pzicon.png"
 }
