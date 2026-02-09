@@ -2,55 +2,41 @@
 title: "Getting Started"
 ---
 
-Getting Started
+`pz_wipes` is a modular, high-performance cleanup system built to keep your FiveM server running smooth and stable. It intelligently manages world entities (Vehicles, Peds, Objects) to reduce lag, clear debris, and prevent griefing — `all without disrupting roleplay.`
 
-pz_wipes is a modular, high-performance cleanup system built to keep your FiveM server running smooth and stable.
+## Features
 
-It intelligently manages world entities (Vehicles, Peds, Objects) to reduce lag, clear debris, and prevent griefing — all without disrupting roleplay.
+* **Smart Vehicle Wipe**: Automatically removes broken, exploded, or abandoned vehicles while protecting player-owned ones.
 
-Features
+* **Anti-Grief Object Wipe**: Cleans up modder spam (cages, windmills) and common debris using a configurable blacklist.
 
-🚗 Smart Vehicle Wipe: Automatically removes broken, exploded, or abandoned vehicles.
+* **Safezone System**: Prevents wipes in protected areas (Legion, dealerships, etc.).
 
-Protects: Player‑owned vehicles (via oxmysql DB check), vehicles with drivers/passengers, and whitelisted models.
+* **Audio Warnings**: Immersive audio countdowns notify players before wipes occur — `no intrusive UI.`
 
-🧱 Anti‑Grief Object Wipe: Cleans up modder spam (cages, windmills, UFOs) and common debris (cones, boxes) using a configurable blacklist.
+* **Framework Agnostic**: Works out‑of‑the‑box with `QBCore`, `ESX`, and `Ox Core`.
 
-🧍 Ped Cleanup: Removes dead bodies or glitchy locals. (Default: Manual command only to protect RP scenarios.)
+## Installation
 
-🛑 Safezone System: Prevents wipes in protected areas (Legion, dealerships, etc.).
+<Steps>
+<Step title="Place Resource">
+Download the resource and drop the pz_wipes folder into your resources directory.
+</Step>
 
-🔊 Audio Warnings: Immersive audio countdowns notify players before wipes occur — no intrusive UI.
+<Step title="Dependencies">
+Ensure you have `oxmysql` installed. This is required for ownership checks to prevent wiping player vehicles.
+</Step>
 
-🧩 Framework Agnostic: Works out‑of‑the‑box with QBCore, ESX, and Ox Core.
+<Step title="Start Resource">
+Add the ensure commands to your `server.cfg`, ensuring `oxmysql` starts first:
+cfg ensure `oxmysql` `ensure pz_wipes`
+</Step>
 
-🛠️ Developer Friendly: Open custom.lua hooks allow custom logic without touching encrypted code.
+<Step title="Configuration">
+Open `settings.lua` to configure intervals, warnings, and safezones to match your server's needs.
+</Step>
+</Steps>
 
-Dependencies
-
-Required
-
-oxmysql (Required for ownership checks)
-
-Optional
-
-ox_lib
-
-qb-core / es_extended / ox_core
-
-Installation
-
-Download the resource and place pz_wipes inside your resources folder.
-
-Ensure you have oxmysql installed and started.
-
-Add the ensure command to your server.cfg:
-
-ensure pz_wipes
-
-
-Configure settings.lua to match your server’s needs.
-
-Support
+## Support
 
 If you have any questions or run into issues, please contact me via https://guns.lol/pz.
