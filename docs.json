@@ -36,8 +36,8 @@
               {
                 "group": "Exports",
                 "pages": [
-                  "pzvip-client",
-                  "pzvip-server"
+                  "pzvip-client-exports",
+                  "pzvip-server-exports"
                 ]
               },
               "pzvip-commands-guide"
@@ -54,16 +54,16 @@
           {
             "group": "pz_wipes",
             "pages": [
-              "pzantimap-getting-started-copied-1",
-              "pzantimap-configuration-copied-1",
+              "pzwipes-getting-started",
+              "pzwipes-configuration",
               {
                 "group": "Exports",
                 "pages": [
-                  "pzvip-server-copied-1"
+                  "pzwipes-server-exports"
                 ]
               },
-              "commands",
-              "pzantimap-common-issues-copied-1"
+              "pzwipes-commands-guide",
+              "pzwipes-common-issues"
             ]
           }
         ]
