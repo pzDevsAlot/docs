@@ -1,0 +1,42 @@
+---
+title: Configuration
+description: "The script is configured via the `settings.lua` file. This file allows you to control wipe intervals, warnings, and protection systems."
+---
+
+## Core Settings
+
+### ⏱️ Schedules
+
+You can adjust the frequency of automatic cleanups.
+
+*   **Interval**: Time in minutes between wipes (Default: 45 minutes).
+*   **WarningTimes**: Configure when audio countdowns should play before a wipe occurs.
+
+### 🔔 Notifications
+
+Choose your preferred notification provider to match your server's UI:
+
+*   **Options**: `'ox'`, `'qb'`, `'esx'`, `'chat'`, `'gta'`
+
+## Protection Systems
+
+### 🚫 Blacklists
+
+To prevent specific objects from being wiped (or to specifically target debris), add or remove object hashes in:
+`Config.Objects.Blacklist`
+
+### 🛡️ Safezones
+
+Define static coordinates where wipes are completely disabled. This is useful for high-traffic areas like:
+
+*   Legion Square
+*   Car Dealerships
+*   Mechanic Shops
+
+```lua
+-- Example Safezone Config
+Config.Safezones = {
+    { coords = vector3(230.1, -785.2, 30.0), radius = 50.0 },
+    -- Add more zones as needed
+}
+```

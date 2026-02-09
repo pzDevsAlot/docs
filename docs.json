@@ -50,6 +50,22 @@
               "pzantimap-configuration",
               "pzantimap-common-issues"
             ]
+          },
+          {
+            "group": "pz_wipes",
+            "pages": [
+              "pzantimap-getting-started-copied-1",
+              "pzantimap-configuration-copied-1",
+              {
+                "group": "Exports",
+                "pages": [
+                  "pzvip-client-copied-1",
+                  "pzvip-server-copied-1"
+                ]
+              },
+              "commands",
+              "pzantimap-common-issues-copied-1"
+            ]
           }
         ]
       }

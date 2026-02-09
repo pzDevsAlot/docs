@@ -1,0 +1,44 @@
+---
+title: "Server"
+description: "Functions available to your server-side scripts."
+---
+
+<Card title="SetEntitySafe" icon="sparkles">
+  Prevent specific entities from being wiped. This is useful for garage zones, mission vehicles, or mechanic bays.
+
+  ```lua
+  exports['pz_wipes']:SetEntitySafe(entityHandle, boolean) -- Returns: void
+  ```
+</Card>
+
+<Card title="Integration Examples" icon="sparkles">
+  ```lua
+  -- Create a vehicle for a job
+  local veh = CreateVehicle(model, coords, heading, true, true)
+  
+  -- Register it as "Safe" so pz_wipes ignores it
+  exports['pz_wipes']:SetEntitySafe(veh, true)
+  
+  -- When the job is done, allow the vehicle to be wiped
+  exports['pz_wipes']:SetEntitySafe(veh, false)
+  ```
+</Card>
+
+<Card title="Custom Logic Hooks" icon="sparkles">
+  You can add advanced logic without touching encrypted files by editing server/custom.lua.
+
+  CustomIsSafe
+
+  This function runs before an entity is wiped. If it returns true, the entity is skipped.
+
+  ```lua
+  -- server/custom.lua
+  function CustomIsSafe(coords)
+      -- Example: Check if coordinates are inside a PolyZone
+      if exports['PolyZone']:isPointInside(coords) then
+          return true
+      end
+      return false
+  end
+  ```
+</Card>
