@@ -1,0 +1,48 @@
+---
+title: "Getting Started"
+---
+
+**pz_crosshair** is a highly optimized, feature-rich crosshair system designed to give your players total control over their gunplay experience. Built for competitive and roleplay servers alike, it allows users to build their perfect `reticle` using native drawing methods or custom image URLs — all without dropping a single frame.
+
+## Features
+
+* **Dual Rendering Modes**: Choose between highly optimized native drawing (lines, dots, outlines) or input a direct URL for custom image-based crosshairs.
+
+* **Deep Customization**: Full control over shape, visuals, and colors, including gap size, line length/thickness, and dot toggles.
+
+* **Profile System & Presets**: Players can save multiple personal profiles, quickly swap between them, or load server-defined presets.
+
+* **Share & Import**: Built-in base64 code generation allows players to instantly copy their crosshair settings and share them with friends.
+
+* **Dynamic Resolution Scaling**: Automatically recalculates geometry if a player changes their screen resolution or aspect ratio.
+
+* **Adaptive UI**: Natively supports standard ox_lib context menus and dialogs, while fully integrating with `pz_utility` (if installed).
+
+## Installation
+
+<Steps>
+<Step title="Place Resource">
+Download the resource and drop the `pz_crosshair` folder into your resources directory.
+</Step>
+
+<Step title="Dependencies">
+Ensure you have `ox_lib` installed. This is required for standard menus and inputs. If you are using your own UI, pz_utility is natively supported.
+</Step>
+
+<Step title="Start Resource">
+Add the ensure commands to your server.cfg, ensuring `ox_lib` starts first:
+
+ensure `ox_lib`
+ensure `pz_crosshair`
+
+
+</Step>
+
+<Step title="Configuration">
+Open config.lua to configure default starting values, presets, and UI preferences to match your server's aesthetic.
+</Step>
+</Steps>
+
+## Support
+
+If you have any questions or run into issues, please contact me via https://discord.gg/yXPUBgZUmb

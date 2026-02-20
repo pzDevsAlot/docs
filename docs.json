@@ -65,6 +65,15 @@
               "pzwipes-commands-guide",
               "pzwipes-common-issues"
             ]
+          },
+          {
+            "group": "pz_crosshair",
+            "pages": [
+              "pzcrosshair-getting-started",
+              "pzcrosshair-configuration",
+              "pzcrosshair-commands-guide",
+              "pzcrosshair-common-issues"
+            ]
           }
         ]
       }

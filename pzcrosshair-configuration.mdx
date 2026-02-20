@@ -1,0 +1,40 @@
+---
+title: Configuration
+description: "The script is configured via the config.lua file. This file allows you to define default crosshair styles, manage server presets, toggle UI integrations."
+---
+
+## Core Settings
+
+### 🎯 Default Styling
+
+You can set the baseline crosshair appearance for first-time players. These values are applied before a player creates or saves their own profile.
+
+- `mode`: Choose the default rendering method ('native' or 'image').
+- `thickness / length / gap`: Control the default geometry and size of the native crosshair.
+- `color / dotColor`: Define the default RGB colors (e.g., `{0, 255, 0}` for green).
+- `dot / outline`: Toggle the visibility of the center dot and black outlines.
+
+### 🖥️ UI Preferences
+
+Control how the script interfaces with your server's menus:
+
+- `UsePzUtility`: Set to `true` to use the immersive pz_utility UI, or `false` to default to standard `ox_lib` context menus and input dialogs.
+
+## Advanced Systems
+
+### 📋 Server Presets
+
+You can define pre-configured crosshairs that all players can quickly access from the public Presets menu. This is great for offering classic shooter layouts out-of-box.
+
+### 🔗 Custom Images
+
+If you want to allow players to use image URLs for their reticles, they can simply paste the direct image link (e.g., Imgur or Discord attachment) into the Image Editor UI.
+
+```lua
+-- Example Preset Config
+Config.Presets = {
+    ['dot'] = { label = 'Simple Dot', active = true, mode = 'native', dot = true, length = 0, outline = true },
+    ['classic'] = { label = 'Classic Cross', active = true, mode = 'native', thickness = 2, length = 12, gap = 4, dot = false },
+    -- Add more presets as needed
+}
+```
