@@ -1,0 +1,21 @@
+---
+title: 'Common Issues'
+---
+
+## Known Issues
+
+There is a known issue where prone movement may jitter slightly when aiming while moving.
+
+## Troubleshooting Tips
+
+If you find that movement is glitchy, the camera jitters in prone, or stances won't activate:
+
+* **Check Config**: Ensure you haven't missed a comma , or made a syntax error in your configuration file (settings.lua). A syntax error can cause the script's internal loops to fail, leading to animation blending and camera jittering issues.
+
+* **Check Keybindings**: If the stance key isn't working for a player, remember that RegisterKeyMapping saves settings locally on their client. They may need to manually reset or rebind their keys in Esc > Settings > Keybindings > FiveM if you recently changed the default key.
+
+* **Conflicting Scripts**: Check your server for other movement, animation, or HUD scripts that might have built-in crouch/prone mechanics. Be sure to disable any default or overlapping stance scripts to prevent conflicts with pz_stance.
+
+* **Reinstall Files**: Ensure the resource is fully updated and no files are missing or corrupted.
+
+If you discover a bug, please report it in our Discord Server.

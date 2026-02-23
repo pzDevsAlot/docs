@@ -1,0 +1,33 @@
+---
+title: Configuration
+description: "The script is configured via the settings.lua file. This file allows you to define movement speeds, toggle prone functionality, and customize input methods."
+---
+
+## Core Settings
+
+### ⌨️ Input System
+
+Control how players interact with the stance system. You can choose between a streamlined single-key approach or dedicated competitive keybinds.
+
+- `UseTwoKeys`: Set to `true` to use separate keys for crouching and proning. Set to `false` for the Tap-to-Crouch / Hold-to-Prone system.
+- `Key`: The primary key used for the Single-Key system (Default: `'LCONTROL'`).
+- `HoldTimeToProne`: How long (in milliseconds) the key must be held to trigger prone instead of a crouch toggle.
+- `CrouchKey` / `ProneKey`: Dedicated keys used only when `UseTwoKeys` is enabled.
+
+### 🚶 Stance Behavior
+
+Define the global availability and combat rules for different stances.
+
+- `EnableProne`: Set to `false` to completely disable the prone and crawling system, leaving only the crouch functionality.
+- `AllowProneFiring`: Toggles the ability to aim and shoot weapons while in the prone state.
+- `AllowCrouchSprinting`: Toggles whether players can use the sprint key while in a crouched state.
+
+## Movement Settings
+
+### ⚡ Speed Multipliers
+
+Fine-tune how fast players move when using custom stances. Note that these values act as multipliers (`1.0` is standard).
+
+- `CrouchMoveSpeed`: The multiplier for standard walking and strafing while crouched.
+- `CrouchSprintSpeed`: The multiplier applied when the player holds the sprint key while crouched.
+

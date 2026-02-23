@@ -1,0 +1,42 @@
+---
+title: "Client"
+description: "Functions available to your client-side scripts."
+---
+<Card icon="sparkles" title="IsCrouched">
+Returns whether the local player is currently in the crouched stance. This is useful for adjusting camera angles, restricting actions, or applying custom logic based on the player's posture.
+
+```lua
+local isCrouched = exports['pz_stance']:IsCrouched() -- Returns: boolean
+```
+</Card>
+
+<Card icon="sparkles" title="IsProne">
+Returns whether the local player is currently in the prone state.
+
+```lua
+local isProne = exports['pz_stance']:IsProne() -- Returns: boolean
+```
+</Card>
+
+<Card icon="sparkles" title="Integration Examples">
+
+```lua
+-- Example: Prevent a player from using an item if they are prone
+RegisterNetEvent('my_inventory:useMedkit', function()
+    local isProne = exports['pz_stance']:IsProne()
+
+    if isProne then
+        -- Notify the player that they need to stand or crouch first
+        lib.notify({
+            title = 'Action Denied',
+            description = 'You cannot use a medkit while prone.',
+            type = 'error'
+        })
+        return
+    end
+
+    -- Proceed with using the medkit
+    ApplyMedkitAnimation()
+end)
+```
+</Card>

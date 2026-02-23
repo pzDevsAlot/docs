@@ -74,6 +74,20 @@
               "pzcrosshair-commands-guide",
               "pzcrosshair-common-issues"
             ]
+          },
+          {
+            "group": "pz_stance",
+            "pages": [
+              "pzcrosshair-getting-started-copied-1",
+              {
+                "group": "Exports",
+                "pages": [
+                  "pzstance-client-exports"
+                ]
+              },
+              "pzstance-configuration",
+              "pzstance-common-issues"
+            ]
           }
         ]
       }

@@ -1,0 +1,47 @@
+---
+title: "Getting Started"
+---
+
+**pz_stance** is a high-performance, polished movement overhaul designed to bring tactical depth and fluid character control to your FiveM server. Built with a focus on immersion and technical stability, it provides a seamless transition between standing, crouching, and proning.
+
+## Features
+
+* **Smart Combat Detection**: Integrated logic that detects when a player is aiming. Instead of changing stances mid-gunfight, the system toggles native stealth movement to maintain tactical positioning.
+
+* **Variable Speed Control**: Fully adjustable movement multipliers for crouching, allowing players to sprint while crouched with custom speed caps.
+
+* **Flexible Input Dispatcher**: Choose between a streamlined Single-Key system (Tap to Crouch / Hold to Prone) or a Dedicated Two-Key system for instant response times.
+
+* **Tactical Maneuvers**: Full support for diving into prone while sprinting and functional forward/backward crawling cycles.
+
+* **Zero-Impact Optimization**: Built using high-efficiency loops that remain at 0.00ms idle, scaling intelligently only when movement logic is active.
+
+## Installation
+
+<Steps>
+<Step title="Place Resource">
+Download the resource and drop the pz_stance folder into your resources directory.
+</Step>
+
+<Step title="Configuration">
+Open settings.lua to customize the movement experience. Here you can toggle prone entirely, adjust crouch speeds, and choose your preferred input method (Single-Key vs Two-Key).
+</Step>
+
+<Step title="Start Resource">
+Add the ensure command to your server.cfg:
+
+ensure `pz_stance`
+
+
+</Step>
+
+<Step title="Exports & Integration">
+If you are a developer, you can use the built-in exports to check a player's stance from other scripts:
+isCrouched = exports[&#39;pz_stance&#39;]:IsCrouched()
+isProne = exports[&#39;pz_stance&#39;]:IsProne()
+</Step>
+</Steps>
+
+## Support
+
+If you have any questions or run into issues, please contact me via https://discord.gg/yXPUBgZUmb
