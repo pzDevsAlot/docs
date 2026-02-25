@@ -1,9 +1,19 @@
 ---
-title: Introduction
-description: "Welcome to the pz dev ecosystem – High-performance scripts for FiveM."
+title: "Introduction"
+description: "Welcome to the pz development ecosystem – High-performance scripts for FiveM."
 ---
-<img className="block dark:hidden" src="/pzicon.png" alt="pz_Dev Banner" />
-<img className="hidden dark:block" src="/pzicon.png" alt="pz_Dev Banner" />
+
+<img
+  className="block dark:hidden"
+  src="/pzscripts.png"
+  alt="pz_Dev Banner"
+/>
+
+<img
+  className="hidden dark:block"
+  src="/pzscripts.png"
+  alt="pz_Dev Banner"
+/>
 
 Welcome
 
@@ -14,30 +24,18 @@ This site contains detailed guides, configuration references, and troubleshootin
 Why Choose pz dev?
 
 <CardGroup cols={2}>
-<Card
-title="Optimized Performance"
-icon="gauge-high"
->
-Lowering MS and resource usage is our priority. Every script is tested for high-population stability.
-</Card>
-<Card
-title="Framework Versatility"
-icon="code"
->
-Deep integration with QBCore while maintaining clean logic for custom core adaptations.
-</Card>
-<Card
-title="Developer Centric"
-icon="screwdriver-wrench"
->
-Extensive exports and open-ended config files allow you to tailor every script to your server's needs.
-</Card>
-<Card
-title="Premium Support"
-icon="discord"
->
-Access to a dedicated community and direct developer support for all pz_Dev+ subscribers.
-</Card>
+  <Card icon="gauge-high" title="Optimized Performance">
+    Lowering MS and resource usage is our priority. Every script is tested for high-population stability.
+  </Card>
+  <Card icon="code" title="Framework Versatility">
+    Deep integration with QBCore while maintaining clean logic for custom core adaptations.
+  </Card>
+  <Card icon="screwdriver-wrench" title="Developer Centric">
+    Extensive exports and open-ended config files allow you to tailor every script to your server's needs.
+  </Card>
+  <Card icon="discord" title="Premium Support">
+    Access to a dedicated community and direct developer support for all pz_Dev+ subscribers.
+  </Card>
 </CardGroup>
 
 Getting Started & Installation
@@ -45,52 +43,48 @@ Getting Started & Installation
 To get the most out of pz_Dev resources, follow this structured guide to ensure a smooth installation:
 
 <Steps>
-<Step title="1. Global Requirements & Artifacts">
-Before installing, ensure your server artifacts are up to date.
+  <Step title="1. Global Requirements & Artifacts">
+    Before installing, ensure your server artifacts are up to date.
 
-At an absolute minimum, our scripts require **Server Artifact version 7290** or higher. We strongly suggest using the latest **Recommended** artifact listing for your server's operating system.
+    At an absolute minimum, our scripts require **Server Artifact version 7290** or higher. We strongly suggest using the latest **Recommended** artifact listing for your server's operating system.
 
-*Note: This is different from your Game Build (e.g., 3095), which is also fully supported.*
-</Step>
+    _Note: This is different from your Game Build (e.g., 3095), which is also fully supported._
+  </Step>
+  <Step title="2. Download from Keymaster">
+    To download your purchased asset, head over to the Cfx.re Keymaster Portal.
 
-<Step title="2. Download from Keymaster">
-To download your purchased asset, head over to the Cfx.re Keymaster Portal.
+    1. Log in and navigate to the **"Granted Assets"** tab.
+    2. Search for `pz-` to find your assets.
 
-1. Log in and navigate to the **"Granted Assets"** tab.
-2. Search for `pz-` to find your assets.
+    _Note: After purchase, it may take up to 5 minutes for the asset to appear in your portal account._
+  </Step>
+  <Step title="3. Install the Resource">
+    Extract or open the zip file you just downloaded.
 
-*Note: After purchase, it may take up to 5 minutes for the asset to appear in your portal account.*
-</Step>
+    **Important:** Do NOT drag the downloaded folder directly into your server blindly. Open it first. The folders inside are the actual resources that you must add to your server's `resources` directory (e.g., `pz_antimapcollision`).
+  </Step>
+  <Step title="4. Configuration">
+    Open the config.lua file within the resource folder. Modify the settings to match your server's economy, permission levels, and specific needs before starting the script.
+  </Step>
+  <Step title="5. Restart & Verify">
+    Fully restart your FiveM server.
 
-<Step title="3. Install the Resource">
-Extract or open the zip file you just downloaded.
-
-**Important:** Do NOT drag the downloaded folder directly into your server blindly. Open it first. The folders inside are the actual resources that you must add to your server's `resources` directory (e.g., `pz_antimapcollision`).
-</Step>
-
-<Step title="4. Configuration">
-Open the config.lua file within the resource folder. Modify the settings to match your server's economy, permission levels, and specific needs before starting the script.
-</Step>
-
-<Step title="5. Restart & Verify">
-Fully restart your FiveM server.
-
-If you just start the script via the console or txAdmin while the server is running, you will likely run into a Keymaster escrow error. Restarting your server ensures your server is aware of your new license and authenticates the script correctly.
-</Step>
+    If you just start the script via the console or txAdmin while the server is running, you will likely run into a Keymaster escrow error. Restarting your server ensures your server is aware of your new license and authenticates the script correctly.
+  </Step>
 </Steps>
 
 pz_Dev+ Subscription
 
-<Card title="Upgrade to pz_Dev+" icon="crown" href="https://pz-dev-store.tebex.io/category/subscriptions">
-Looking for the full suite? The pz_Dev+ package grants you access to our entire library of scripts, exclusive beta releases, and priority support.
+<Card icon="crown" href="https://pz-dev-store.tebex.io/category/subscriptions" title="Upgrade to pz_Dev+">
+  Looking for the full suite? The pz_Dev+ package grants you access to our entire library of scripts, exclusive beta releases, and priority support.
 </Card>
 
 Feedback & Support
 
 We want this documentation to be as helpful as possible.
 
-<Card title="Join our Discord" icon="discord" href="https://discord.gg/yXPUBgZUmb">
-Have questions or feedback?
+<Card icon="discord" href="https://discord.gg/yXPUBgZUmb" title="Join our Discord">
+  Have questions or feedback?
 
-If you find a section confusing, notice missing info, or encounter any issues, simply open a ticket in our Discord server. Our support staff is ready to assist you!
+  If you find a section confusing, notice missing info, or encounter any issues, simply open a ticket in our Discord server. Our support staff is ready to assist you!
 </Card>
