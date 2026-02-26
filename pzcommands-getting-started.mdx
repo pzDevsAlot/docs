@@ -1,0 +1,40 @@
+---
+title: "Getting Started"
+---
+
+*pz_commands* is a highly polished, command menu designed to bring modern UI standards and quality-of-life improvements to your FiveM server. Built with a focus on seamless interaction and aesthetic superiority, it provides players with a fast, intuitive way to store, organize, and execute their most used commands without breaking immersion.
+
+## Features
+
+* *Dynamic Role Integration*: Smart tabs automatically hide or show based on a player's active job, gang, and duty status using built-in framework bridges.
+
+* *Player-Driven Organization*: Full support for players to add, edit, and manually categorize their custom commands into personal folders and groups.
+
+* *Seamless Interaction*: Designed for fluid gameplay with a flexible input system. Hold N to quickly pop open the menu and execute commands on the fly, or type /favcommand to lock the menu open for easier folder setup.
+
+* *Modern UI Aesthetics*: A minimalist, high-end design inspired by top-tier UI frameworks, complete with sleek transitions and a custom reactive cursor.
+
+* *Zero Database Bloat*: Operates entirely on FiveM's native KVP (Key-Value Pair) system, ensuring fast load times and zero server-side storage impact.
+
+## Installation
+
+<Steps>
+<Step title="Place Resource">
+Download the resource and drop the `pz_commands` folder into your resources directory.
+</Step>
+
+<Step title="Configuration">
+Open config.lua to choose your framework (`qbcore`, `esx`, or `none` or `custom`). Here you can also customize and hardcode persistent, restricted UI tabs specifically for your Police, EMS, Gangs, or VIP groups.
+</Step>
+
+<Step title="Start Resource">
+Add the ensure command to your server.cfg:
+
+ensure pz_commands
+
+</Step>
+</Steps>
+
+## Support
+
+If you have any questions or run into issues, please contact me via https://discord.gg/yXPUBgZUmb

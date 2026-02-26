@@ -1,0 +1,55 @@
+---
+title: Configuration
+description: "The script is configured via the config.lua file. This file allows you to define your framework, create custom server tabs, and set role-based requirements."
+---
+
+## Core Settings
+
+### ⚙️ Framework Setup
+
+Control how the script communicates with your server to fetch player data (jobs, gangs, and duty status).
+
+*   `Config.Framework`: Set your active framework. Accepts 'qbcore', 'esx', or 'none' (for a fully standalone experience with no job checks).
+
+## UI Configuration
+
+### 📑 Hardcoded Tabs (Config.Tabs)
+
+This table allows you to pre-define custom command folders for specific groups of players on your server, such as Police, EMS, or Gangs. These tabs cannot be deleted by the player.
+
+Each tab accepts the following parameters:
+
+*   `id`: A unique string identifier for the tab (e.g., 'police_commands').
+*   `label`: The display name shown in the UI sidebar.
+*   `icon`: The FontAwesome icon class (e.g., 'fa-shield-halved').
+*   `description`: A short sub-text displayed at the top of the menu when the tab is selected.
+*   `commands`: A list of commands available in this tab. Format: `{ cmd = '/cuff', label = 'Hard Cuff' }`.
+
+### 🔐 Requirements System
+
+You can restrict who sees and uses these hardcoded tabs by utilizing the `requirements` table within each tab definition.
+
+*   **Job Restriction:** Set `type = 'job'` and define the `value` (e.g., 'police').
+*   **Duty Requirement:** Add `requireDuty = true` alongside a job restriction to force the player to be clocked in before they can access the tab.
+*   **Gang Restriction:** Set `type = 'gang'` and define the `value` (e.g., 'ballas').
+*   **Public Access:** Set `requirements = false` or omit it entirely to make the tab visible to everyone on the server.
+
+### Example Configuration
+
+```lua
+Config.Tabs = {
+    {
+        id = 'police_commands',
+        label = 'Police Settings',
+        icon = 'fa-shield-halved',
+        description = 'LSPD Field Operations',
+        requirements = { type = 'job', value = 'police', requireDuty = true },
+        commands = {
+            { cmd = '/cuff', label = 'Hard Cuff' },
+            { cmd = '/sc', label = 'Soft Cuff' },
+            { cmd = '/escort', label = 'Escort' },
+            { cmd = '/mdt', label = 'Open MDT' }
+        }
+    }
+}
+```

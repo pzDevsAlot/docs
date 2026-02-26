@@ -88,6 +88,14 @@
               "pzstance-configuration",
               "pzstance-common-issues"
             ]
+          },
+          {
+            "group": "pz_commands",
+            "pages": [
+              "pzcommands-getting-started",
+              "pzcommands-configuration",
+              "pzcommands-common-issues"
+            ]
           }
         ]
       }

@@ -1,0 +1,27 @@
+---
+title: 'Common Issues'
+description: 'Troubleshooting steps and known issues for pz_commands.'
+---
+## Known Issues
+
+There are currently no major known bugs for pz_commands. If you discover an issue or visual glitch, please report it in our Discord Server.
+
+## Troubleshooting Tips
+
+If you are experiencing issues with the UI not loading, tabs missing, or keybinds failing, check the following common fixes:
+
+* *UI Not Showing / Invisible*: If you recently encrypted the script or split the HTML, CSS, and JS into separate files, you must ensure that all of those files are explicitly listed in the files array within your fxmanifest.lua. If they are not listed, FiveM's NUI security will block them from loading.
+
+* *Keybindings Not Working*: If pressing N (or your custom default key) doesn't open the menu for a player, remember that RegisterKeyMapping saves settings locally on their client. They may need to manually check, reset, or rebind their keys by navigating to Esc > Settings > Keybindings > FiveM.
+
+* *Restricted Tabs Missing*: If a player isn't seeing the configured Police, EMS, or Gang tabs:
+
+* Verify that Config.Framework is correctly set to 'qbcore' or 'esx' in config.lua.
+
+* Double-check that the player's in-game job/gang name exactly matches the value defined in the config.
+
+* If requireDuty = true is set for that tab, ensure the player is actually clocked in/on-duty.
+
+* *Config Syntax Errors*: A missing comma , or a misplaced bracket inside your Config.Tabs table in config.lua will break the script and prevent the UI from receiving data. Always check your F8 client console or server console for Lua syntax errors after editing.
+
+If you are still having trouble or discover a bug, please contact us via our Discord Server.
