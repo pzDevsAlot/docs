@@ -1,0 +1,19 @@
+---
+title: 'Common Issues'
+description: 'Troubleshooting steps and known issues for PZ_ANTIQ.'
+---
+## Known Issues
+
+Chain-link Fences / Glass: Because GTA V treats certain breakable or transparent materials as solid entities to native raycasts, players may occasionally see the "Weapon Blocked" message when trying to shoot through specific types of wire fences or unbreakable glass.
+
+## Troubleshooting Tips
+
+If you find that the cover system isn't disabling, or the anti-headglitch mechanic isn't triggering correctly:
+
+Check Config Syntax: Ensure you haven't missed a comma , or made a syntax error in your config.lua. A syntax error can cause the script to fail on startup, meaning none of the combat restrictions will apply.
+
+Conflicting Scripts: Check your server for other PvP, weapon, or movement scripts. If another script is actively forcing EnableControlAction(0, 44, true) (the cover control), it may conflict with PZ_ANTIQ's ability to disable it.
+
+Weapon Mod / Add-on Weapons: If the anti-headglitch script isn't detecting barrel blockage on a specific custom weapon, ensure the add-on weapon's metadata correctly defines its barrel bone (weapon_muzzle / muzzle). The dual-point raycasting relies on finding the end of the barrel to calculate the trajectory.
+
+If you discover a bug or have a suggestion, please report it in our Discord Server.

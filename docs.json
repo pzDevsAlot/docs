@@ -96,6 +96,14 @@
               "pzcommands-configuration",
               "pzcommands-common-issues"
             ]
+          },
+          {
+            "group": "pz_antiQ",
+            "pages": [
+              "pzantiQ-getting-started",
+              "pzantiQ-configuration",
+              "pzantiQ-common-issues"
+            ]
           }
         ]
       }

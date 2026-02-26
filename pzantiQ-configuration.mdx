@@ -1,0 +1,39 @@
+---
+title: Configuration 
+description: "PZ_ANTIQ comes with an easy-to-use config file where you can define exactly which mechanics are active and tweak the visual feedback for your players."
+---
+
+## Core Settings
+
+🛡️ Combat Mechanics
+
+* Control which PvP restrictions are enforced on your server. This allows you to set a baseline standard that fits your server's specific PvP balance.
+
+* Config.DisableNativeCover: Set to true to completely block players from snapping to walls using the default GTA V cover system (Q / RB).
+
+* Config.EnableAntiHeadglitch: Set to true to activate the dual-point raycasting system that prevents players from shooting when their weapon barrel is obstructed.
+
+👁️ Visual Feedback
+
+* Customize the information players receive when the anti-headglitch system intercepts their shots.
+
+* *Config.ShowObstructionText*: Set to true to display a 3D text indicator at the exact location where the player's bullet is being blocked.
+
+* *Config.ObstructionMessage*: The text string displayed to the player (e.g., "Weapon Blocked" or "Target Obstructed").
+
+* *Config.TextScale & Config.TextColor*: Fine-tune the size and color of the 3D text to match your server's UI aesthetics.
+
+### Example Configuration
+
+```lua
+Config = {}
+
+-- Main Features
+Config.DisableNativeCover = true
+Config.EnableAntiHeadglitch = true
+
+-- Visual Settings
+Config.ShowObstructionText = true
+Config.ObstructionMessage = "Weapon Blocked"
+Config.TextColor = { r = 255, g = 50, b = 50, a = 200 }
+```
