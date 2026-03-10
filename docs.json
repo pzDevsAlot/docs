@@ -104,6 +104,14 @@
               "pzantiQ-configuration",
               "pzantiQ-common-issues"
             ]
+          },
+          {
+            "group": "pz_adminjail",
+            "pages": [
+              "pzadminjail-getting-started",
+              "pzadminjail-configuration",
+              "pzadminjail-common-issues"
+            ]
           }
         ]
       }

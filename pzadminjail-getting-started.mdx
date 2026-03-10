@@ -1,0 +1,64 @@
+---
+title: "Getting Started"
+---
+ **pz_adminjail** is a highly polished, secure, and interactive administrative jail system designed to bring modern UI standards and quality-of-life improvements to your FiveM server's moderation. Built with a focus on immersive consequence, it provides server staff with a fast, intuitive way to manage rule-breakers while forcing inmates to actively serve their time through interactive labor tasks.
+
+### Features
+
+* *Multi-Framework Support*: Built-in bridge auto-detects and seamlessly supports ESX, QB-Core, QBox, and Ox_Core, while also fully supporting Standalone setups via ACE permissions.
+
+* *Dynamic Locations & Tasks*: Define unlimited jail facilities (e.g., Penitentiary, Exercise Yard, Construction Site) with specific task zones like custom sweeping, ground drilling, and weightlifting.
+
+* *Advanced Release Logic*: Choose between Milestone Mode (complete X amount of tasks for full release) or Standard Mode (randomized task requirements to reduce the sentence minute-by-minute).
+
+* *Modern UI Aesthetics*: A minimalist, high-end design for the Admin Menu, featuring smooth HUD background animations, real-time inmate tracking, and quick-action moderation buttons.
+
+* *Rock-Solid Security*: Operates on SQL-backed persistence to prevent combat-logging, features aggressive prop cleanup to keep environments clean, and includes deep Character ID validation to prevent cross-character jail exploits.
+
+### Dependencies
+
+`ox_lib` (Required for UI, target zones, and default progress bar)
+
+`oxmysql` (Required for SQL database persistence)
+
+(Optional) `ls_progressbar` (A clean, segmented progress bar alternative)
+
+### Installation
+
+<Steps>
+<Step title="Place Resource">
+Download the resource and drop the pz_adminjail folder into your resources directory.
+</Step>
+<Step title="Database Setup">
+Run the provided install.sql file in your database manager (HeidiSQL, phpMyAdmin) to create the necessary persistence tables.
+</Step>
+<Step title="Configuration">
+Open config.lua to choose your framework (auto, qbcore, esx, qbox, ox). Here you can also set up your Discord webhook, admin permissions, and customize your jail locations and labor tasks.
+</Step>
+<Step title="Start Resource">
+Add the ensure commands to your server.cfg. Make sure dependencies are started first:
+
+ensure `oxmysql`
+ensure `ox_lib`
+ensure `pz_adminjail`
+
+
+</Step>
+</Steps>
+
+Custom Progress Bars
+
+Out of the box, the script natively supports ox (ox_lib) and ls (ls_progressbar) via Config.ProgressBar.
+
+If you use a completely different progress bar script (like qb-radialmenu or a custom UI), you can easily map it without touching the core logic:
+
+Open client/p.lua.
+
+Add a new elseif Config.ProgressBar == 'custom' check inside the JailProgressBar(data) function.
+
+Map the incoming data properties (data.label, data.duration, data.animDict, data.anim, data.scenario, data.flag) to your specific progress bar export.
+Note: Make sure your progress bar returns a boolean (true if finished, false if cancelled) so the main script knows whether to count the task as completed!
+
+### Support
+
+If you have any questions or run into issues, please contact me via https://discord.gg/yXPUBgZUmb

@@ -1,0 +1,84 @@
+---
+title: "Configuration"
+---
+
+The config.lua file is where you can tailor pz_adminjail to fit your server's specific roleplay and moderation needs. Below is a breakdown of the core configuration options.
+
+## Core & Framework Settings
+
+You can let the script auto-detect your framework or force it manually.
+
+```lua
+Config.Framework = 'auto' -- 'auto', 'qbcore', 'esx', 'qbox', 'ox'
+Config.InteractionType = 'interact' -- 'interact' (DrawText + E) or 'target' (qb-target / ox_target)
+Config.ProgressBar = 'ox' -- 'ox' or 'ls'
+```
+
+## Permissions & Logging
+
+Define who can access the /jail, /unjail, and /jailmenu commands. If you are using a framework, you can use group names. If you are standalone, you can use identifiers.
+
+```lua
+Config.AdminGroups = { "admin", "moderator", "god", "owner" }
+Config.AdminIdentifiers = { "license:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" }
+
+-- Set your Discord Webhook URL here to log all jailings, releases, and time edits.
+Config.DiscordWebhook = "YOUR_WEBHOOK_URL_HERE"
+```
+
+### Standalone ACE Permissions
+
+If you prefer FiveM's native ACE system (especially for standalone servers), you can ignore the AdminGroups array and put this directly in your server.cfg:
+
+```
+add_ace group.admin command.jail allow
+add_ace group.admin command.unjail allow
+add_ace group.admin command.jailmenu allow
+```
+
+## Release & Labor Logic
+
+Customize how players earn their freedom through labor tasks.
+
+```lua
+-- Allow tasks to reduce sentence time
+Config.AllowActionRelease = true
+
+-- MILESTONE MODE: Player is released instantly after completing X tasks based on sentence length.
+Config.MilestoneRelease = {
+    enabled = true,
+    ranges = {
+        { min = 1,  max = 10, requiredActions = 15 },
+        { min = 11, max = 20, requiredActions = 30 },
+    }
+}
+
+-- STANDARD MODE: Player reduces their total sentence by 1 minute after completing X random tasks.
+Config.StandardReductionEnabled = true
+Config.ActionsPerMinute = { min = 2, max = 5 }
+```
+
+## Dynamic Locations
+
+You can create infinite locations with specific radii, release points, and labor tasks.
+
+```lua
+Config.Locations = {
+    ['yard'] = {
+        name = "Bolingbroke Exercise Yard",
+        coords = vector3(1643.38, 2529.35, 45.5),
+        release = vector3(223.70, -790.25, 30.72),
+        radius = 15.0, -- Distance before the player is teleported back to the center
+        tasks = {
+            {
+                label = "Bicep Curls",
+                duration = 10000,
+                scenario = "WORLD_HUMAN_MUSCLE_FREE_WEIGHTS",
+                coords = vector3(1642.2, 2523.62, 44.56),
+                heading = 50.88
+            },
+            -- Add more tasks here...
+        }
+    }
+}
+```

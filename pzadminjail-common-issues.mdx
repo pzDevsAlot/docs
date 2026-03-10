@@ -1,0 +1,21 @@
+---
+title: 'Common Issues'
+description: 'Troubleshooting steps and known issues for PZ_ADMINJAIL.'
+---
+### Known Issues
+
+* *Floating or Falling Players*: Because GTA V is very strict about ground coordinates, players may appear to float or fall through the map when jailed or attempting a task. Ensure you are using the exact floor Z-coordinate (usually ending in .56 or .0) rather than the ped's center-mass coordinate. You can use tools like vMenu or admin commands to grab the exact floor coordinate before adding new tasks to the config.
+
+* *Lingering Props*: After completing a custom scenario or animation, props (like brooms or jackhammers) might drop to the floor and not delete natively. The script uses an aggressive global cleanup system, but if you add a brand new custom task, you must manually find out what prop model that scenario uses and add its backtick hash to the cleanableModels array in client/main.lua.
+
+### Troubleshooting Tips
+
+If you find that players aren't being jailed correctly, or the UI isn't functioning:
+
+* *Conflicting Scripts*: Check your server for other default framework jail scripts (e.g., qb-prison or esx_jail). If another script is actively attempting to enforce jail boundaries simultaneously, it will cause a teleport tug-of-war resulting in an infinite black screen loop. Completely disable or remove overlapping jail resources.
+
+* *Missing Dependencies*: If typing /jailmenu does nothing or you see ox_lib errors in the F8 client console, ensure ox_lib is downloaded, up to date, and started before pz_adminjail in your server.cfg. Also, verify you haven't renamed the ox_lib folder, as the UI contexts, progress bars, and targeting logic rely heavily on it.
+
+* *Database Configuration*: If the server console throws an SQL error regarding pz_adminjail on startup, ensure oxmysql is running correctly and your connection string is valid. The script attempts to auto-create missing columns, but strict SQL user permissions may block this. If this happens, manually run the provided install.sql file in your database manager.
+
+If you discover a bug or have a suggestion, please report it in our Discord Server.
